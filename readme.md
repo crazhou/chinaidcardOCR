@@ -143,19 +143,19 @@ python card11.py
 欢迎提供更多性能数据~
 
 ## 支持我
-<p align="center">
+<picture align="center">
     <img width="180" src="
     https://img-oss.whkdshop.com/wechat4.jpg" alt="光谷东程序人生">
-</p>
-<p align="center">
+</picture>
+<p>
   项目开发不易，感谢你的打赏
 </p>
 
 ## 关注我
-<p align="center">
+<picture>
     <img width="180" src="
     https://img-oss.whkdshop.com/mpqrcode.jpg" alt="光谷东程序人生">
-</p>
-<p align="center">
+</picture>
+<p>
   关注我的公众号，更新更多技术文章
 </p>
