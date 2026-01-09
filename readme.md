@@ -144,8 +144,7 @@ python card11.py
 
 ## 支持我
 <picture align="center">
-    <img width="180" src="
-    https://img-oss.whkdshop.com/wechat4.jpg" alt="光谷东程序人生">
+    <img width="180" src="https://img-oss.whkdshop.com/wechat4.jpg" alt="光谷东程序人生">
 </picture>
 <p>
   项目开发不易，感谢你的打赏
@@ -153,8 +152,7 @@ python card11.py
 
 ## 关注我
 <picture>
-    <img width="180" src="
-    https://img-oss.whkdshop.com/mpqrcode.jpg" alt="光谷东程序人生">
+    <img width="180" src="https://img-oss.whkdshop.com/mpqrcode.jpg" alt="光谷东程序人生">
 </picture>
 <p>
   关注我的公众号，更新更多技术文章
