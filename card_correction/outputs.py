@@ -1,0 +1,10 @@
+class OutputKeys(object):
+    LOSS = 'loss'
+    LOGITS = 'logits'
+    SCORES = 'scores'
+    POLYGONS = 'polygons'
+    SCORES = 'scores'
+    OUTPUT_IMGS = 'output_imgs'
+    LABELS = 'labels'
+    LAYOUT = 'layout'
+    TEXT = 'text'

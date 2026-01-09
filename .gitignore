@@ -1,0 +1,7 @@
+__pycache__
+data
+dataset
+output
+.env
+*.pt
+*.jpg

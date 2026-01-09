@@ -1,0 +1,76 @@
+│  alimodel.py     使用阿里百炼提供的OCR模型
+│  card11.py       批量处理 images 文件夹下的 jpg 证件图片  
+│  environment.yml conda 环境配置文件
+│  face3.py        基于人脸识别的证件旋转剪裁方法
+│  fc_config.py    paddleocr 模型配置
+│  img2base64.py   图片转base64编码
+│  index.py        阿里云函数计算入口文件
+│  moda.py         魔搭平台方式的调用代码
+│  pdd.py          paddleocr 调用示例
+│  ppocrdet.py     opencv 开源的 ppocr 文本检测封装
+│  readme.md       项目介绍 
+│  rotate.py       图片旋转方法 
+│  s.yaml          阿里云函数计算 配置文件
+│  textdect.py     文字检测配置函数 
+│  tt1.py          不使用文本检测测试函数
+│      
+├─card_correction  读光卡证矫正模型二次开发文件
+│  │  card_detection_correction.py
+│  │  model_resnet18.py
+│  │  outputs.py
+│  │  pipeline.py
+│  │  table_process.py
+│  │  __init__.py
+│  │  
+│  ├─fileio
+│  │  │  file.py
+│  │  │  io.py
+│  │  │  __init__.py
+│  │  │  
+│  │  └─format
+│  │          base.py
+│  │          json.py
+│  │          jsonplus.py
+│  │          yaml.py
+│  │          __init__.py
+│  │          
+│  ├─ocr_recognition 读光行文字识别模型二次开发
+│  │  │  base_model.py
+│  │  │  base_torch_model.py
+│  │  │  model.py
+│  │  │  pipeline.py
+│  │  │  preprocessor.py
+│  │  │  __init__.py
+│  │  │  
+│  │  └─modules
+│  │      └─ConvNextViT
+│  │              convnext.py
+│  │              main_model.py
+│  │              timm_tinyc.py
+│  │              vitstr.py
+│  │              __init__.py
+│  │              
+│  └─utils
+│          checkpoint.py
+│          config.py
+│          constant.py
+│          device.py
+│          file_utils.py
+│          logger.py
+│          torch_utils.py
+│          __init__.py
+│          
+├─images  用于存入测试的证件图片和行文字图片
+│      0123.png
+│      3101.png
+│      4304.png
+│      5221.png
+│      9931.png
+
+│      
+├─model  YuNet人脸检测模型 和 文字检测模型
+│      face_detection_yunet_2023mar.onnx
+│      text_detection_cn_ppocrv3_2023may.onnx
+│      text_detection_en_ppocrv3_2023may.onnx
+│      
+└─output 用于存放经过模型处理后的文件 

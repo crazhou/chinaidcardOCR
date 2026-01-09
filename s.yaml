@@ -1,0 +1,59 @@
+edition: 3.0.0
+name: fc3-example
+access: default
+vars:
+  env:
+    PYTHONPATH: /opt/python
+    NAS_MOUNT_PATH: /mnt/wb
+  region: cn-shanghai
+template:
+  ocr_v1:
+    role: 'ServerlessDev'
+    nasConfig:
+      groupId: 0
+      userId: 0
+      mountPoints:
+        - enableTLS: false
+          serverAddr: 3363048cb1-bih69.cn-shanghai.nas.aliyuncs.com:/
+          mountDir: /mnt/wb
+    logConfig:
+      enableRequestMetrics: true
+      enableInstanceMetrics: true
+      logBeginRule: DefaultRegex
+      project: serverless-cn-shanghai-93ba4731-750e-53dc-9953-0bc4c8de2493
+      enableCustomExtraLog: true
+      logstore: default-logs
+    vpcConfig:
+      securityGroupId: sg-uf6awis7ss0g1vw0z2c7
+      vpcId: vpc-uf6huxnrgkcrnjd3nzref
+      vSwitchIds:
+        - vsw-uf612dc1sjkcv3xfj5mk5
+resources:
+  ocrFunctionV1:
+    component: fc3
+    actions:
+      pre-deploy:
+        - run: for /d /r . %d in (__pycache__) do @if exist "%d" rd /s /q "%d"
+    props:
+      region: ${vars.region}
+      functionName: card-recognition
+      description: 'OCR文字识别测试服务'
+      handler: index.handler
+      timeout: 60
+      diskSize: 512
+      internetAccess: true
+      disableOndemand: false
+      environmentVariables: ${vars.env}
+      layers:
+        - acs:fc:cn-shanghai:1513070232600436:layers/opencv4_10/versions/3
+        - acs:fc:cn-shanghai:1513070232600436:layers/card-cognition/versions/2
+        - acs:fc:cn-shanghai:official:layers/Python310-PyTorch2x/versions/1
+      resourceGroupId: rg-acfmzazfu6r765a
+      instanceIsolationMode: SHARE
+      sessionAffinity: NONE
+      runtime: python3.10
+      cpu: 2
+      memorySize: 2048
+      code: ./
+    extend:
+      name: ocr_v1
