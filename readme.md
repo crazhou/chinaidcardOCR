@@ -9,11 +9,11 @@
 - [关注我](#关注我)
 
 ### 介绍
-- 本项目，使用pytorch + 开源模型 实现随手拍 身份证中 姓名和身份证号 两个字段的提取
-- 支持模糊的以及长姓名的识别，支持二次开发
-- 本项目，基于modelscope 魔搭社区的 两个模型 进行少量的二次开发
+- pytorch + 读光开源模型 实现 随手拍身份证中姓名和身份证号 两个字段的提取
+- 支持模糊图片 以及 长姓名识别，支持二次开发
+- 基于modelscope 魔搭社区 的 两个模型 进行少量的二次开发
 
-> 模型1： 票证检检测矫正模型 [iic/cv_resnet18_card_correction](https://modelscope.cn/models/iic/cv_resnet18_card_correction)
+> 模型1： 票证检测矫正模型 [iic/cv_resnet18_card_correction](https://modelscope.cn/models/iic/cv_resnet18_card_correction)
 
 > 模型2： 读光-文字识别-行识别模型-中英 [iic/cv_convnextTiny_ocr-recognition-general_damo](https://modelscope.cn/models/iic/cv_convnextTiny_ocr-recognition-general_damo)、
 
@@ -119,7 +119,7 @@ conda env create -f environment.yml
 由于证件比较特殊，请你自己拍一张或多张身份证的正面图，尺寸最好不要超过 1920x1080
 命名为 xxxx.jpg 放在 images 文件夹
 
-5. 运行测试
+6. 运行测试
 ```
 conda activate torch-env
 python card11.py 
@@ -129,6 +129,7 @@ python card11.py
 1. 先使用矫正模型提取图片中的身份证，模型支持任意角度的身份证 再缩放至 850x540 大小
 2. 由于尺寸固定了，可以按位置关系 取名字，身份证号字段的文本框，无需调用文字识别算法
 3. 把对应的字段图片送入模型2 进行文字识别即可输出结果 
+> 更多细节， 可以查看这篇文章 <a target="_blank" rel="noopener noreferrer"  href="https://mp.weixin.qq.com/s/nfImS0Y2VCdxccnGJTPasg">公众号文章</a>
 
 ## 性能测试
 暂时还进行专业的性能测试，我在的电脑上粗略测试了10张证件图
@@ -143,7 +144,7 @@ python card11.py
 ## 支持我
 <p align="center">
     <img width="180" src="
-    https://whjys.oss-cn-shanghai.aliyuncs.com/wechat4.jpg" alt="光谷东程序人生">
+    https://img-oss.whkdshop.com/wechat4.jpg" alt="光谷东程序人生">
 </p>
 <p align="center">
   项目开发不易，感谢你的打赏
@@ -152,7 +153,7 @@ python card11.py
 ## 关注我
 <p align="center">
     <img width="180" src="
-    https://whjys.oss-cn-shanghai.aliyuncs.com/mpqrcode.jpg" alt="光谷东程序人生">
+    https://img-oss.whkdshop.com/mpqrcode.jpg" alt="光谷东程序人生">
 </p>
 <p align="center">
   关注我的公众号，更新更多技术文章
