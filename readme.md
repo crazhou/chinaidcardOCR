@@ -132,14 +132,15 @@ python card11.py
 > 更多细节， 可以查看这篇文章 <a target="_blank" rel="noopener noreferrer"  href="https://mp.weixin.qq.com/s/nfImS0Y2VCdxccnGJTPasg">公众号文章</a>
 
 ## 性能测试
-暂时还进行专业的性能测试，我在的电脑上粗略测试了10张证件图
-| 项目| 说明|
+暂未进行专业的性能测试，在本人电脑上简单 测试了10张证件图，结果如下
+|项目 |说明 |
 |-----|:------------------|
 |cpu   |Intel Core Ultra 9 285H  16核心|
 内存| 16GB 8533MT/s|
 |输入图片|1920x1080 手机拍摄|
 |单张耗时|0.5 - 0.8s |
-欢迎提供更多性能数据
+
+欢迎提供更多性能数据~
 
 ## 支持我
 <p align="center">
